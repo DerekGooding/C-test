@@ -1,4 +1,6 @@
-class Program
+namespace NoDelegate;
+
+static class Program
 {
     static void Main()
     {

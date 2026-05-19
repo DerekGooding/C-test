@@ -1,7 +1,9 @@
-﻿class Test
+﻿namespace WithDelegate;
+
+class Test
 {
-    public delegate void MyDelegate(string text);
-    public delegate void MyDelegate2(string text);
+    public Action<string> MyDelegate;
+    public Action<string> MyDelegate2;
 
     public void AfficherText()
     {

@@ -1,9 +1,13 @@
+namespace WithDelegate;
+
 class TestService : IDisposable
 {
+    private readonly Test _test;
     public TestService(Test test)
     {
-        test.MyDelegate += Maj;
-        test.MyDelegate2 += Min;
+        _test = test;
+        _test.MyDelegate += Maj;
+        _test.MyDelegate2 += Min;
     }
 
 
@@ -18,7 +22,7 @@ class TestService : IDisposable
 
     public void Dispose()
     {
-        test.MyDelegate -= Maj;
-        test.MyDelegate2 -= Min;
+        _test.MyDelegate -= Maj;
+        _test.MyDelegate2 -= Min;
     }
 }

@@ -1,11 +1,11 @@
-using System;
+namespace WithDelegate;
 
 class Program
 {
     static void Main()
     {
         Test p = new Test();
-        TestService service = new TestService(p);
+        using var _ = new TestService(p);
         p.AfficherText();
     }
 }

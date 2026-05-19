@@ -1,3 +1,5 @@
+namespace NoDelegate;
+
 class TestService
 {
     public void Maj(string text)

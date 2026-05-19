@@ -1,4 +1,5 @@
-﻿class Test
+﻿namespace NoDelegate;
+class Test
 {
     public void AfficherText(TestService service)
     {

@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="NoDelegate/Nodelegate.csproj" />
-  <Project Path="WithDelegate/withdelegate.csproj" DisplayName="Withdelegate" />
+  <Project Path="NoDelegate/Nodelegate.csproj" DisplayName="NoDelegate" />
+  <Project Path="WithDelegate/withdelegate.csproj" DisplayName="WithDelegate" />
 </Solution>
