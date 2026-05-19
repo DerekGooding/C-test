@@ -6,6 +6,23 @@ class Test
 {
     delegate void MyDelegate(string text);
     delegate void MyDelegate2(string text);
+
+    public void AfficherText()
+    {
+        MyDelegate.Invoke("Salut");
+        MyDelegate2.Invoke("Salut");
+    }
+}
+
+class TestService : IDisposable
+{
+    class TestService(Test test)
+    {
+        test.MyDelegate += Maj;
+        test.MyDelegate2 += Min;
+    }
+
+
     void Maj(string text)
     {
         Console.WriteLine(text.ToUpper());
@@ -14,11 +31,10 @@ class Test
     {
         Console.WriteLine(text.ToLower());
     }
-    public void AfficherText()
+
+    public void Dispose()
     {
-        MyDelegate variableDelegate=Maj;
-        variableDelegate("Salut");
-        MyDelegate2 variableDelegate2=Maj;
-        variableDelegate2("Salut");
+        test.MyDelegate -= Maj;
+        test.MyDelegate2 -= Min;
     }
 }
